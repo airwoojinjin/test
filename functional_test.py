@@ -1,5 +1,3 @@
-from selenium import webdriver
-
-browser = webdriver.Chrome()
-
-browser.get('http://172.16.87.102/')
+def application(env, start_response):
+	start_response('200 OK', [('Content-Type','text/html')])
+	return [b"Hello World"]
