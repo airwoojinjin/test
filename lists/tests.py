@@ -15,8 +15,6 @@ class HomePageTest(TestCase):
         response = self.client.get('/')
         html = response.content.decode('utf8')
         expected_html = render_to_string('home.html')
-        print("\n" + html + "\n\n\n")
-        print(expected_html)
 #        self.assertEqual(html, expected_html)
 
     def test_uses_home_template(self):
@@ -25,8 +23,13 @@ class HomePageTest(TestCase):
 
     def test_can_save_a_POST_request(self):
         response = self.client.post('/', data={'item_text': 'A new list item'})
-        self.assertIn('A new list item', response.content.decode())
-        self.assertTemplateUsed(response, 'home.html')
+
+        self.assertEqual(Item.objects.count(), 1)
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text, 'A new list item')
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['location'], '/')
 
     def test_saving_and_retrieving_items(self):
         first_item = Item()
@@ -42,5 +45,9 @@ class HomePageTest(TestCase):
 
         first_saved_item = saved_items[0]
         second_saved_item = saved_items[1]
-        self.assertEqual(first_saved_item, 'The first (ever) list item')
-        self.assertEqual(second_saved_item, 'Item the second')
+        self.assertEqual(first_saved_item.text, 'The first (ever) list item')
+        self.assertEqual(second_saved_item.text, 'Item the second')
+
+    def test_only_saves_items_when_necessary(self):
+        self.client.get('/')
+        self.assertEqual(Item.objects.count(), 0)
