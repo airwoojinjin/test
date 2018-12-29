@@ -11,7 +11,7 @@ class NewVisitorTest(LiveServerTestCase):
 		self.browser = webdriver.Chrome()
 
 	def tearDown(self):
-		self.browser.refresh()
+#		self.browser.refresh()
 		self.browser.quit()
 
 	def wait_for_row_in_list_table(self, row_text):
@@ -60,6 +60,7 @@ class NewVisitorTest(LiveServerTestCase):
 		self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
 
 		self.browser.refresh()
+		self.browser = webdriver.Chrome()
 		self.browser.quit()
 
 		self.browser.get(self.live_server_url)
