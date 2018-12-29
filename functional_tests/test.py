@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
-import unittest
 from django.test import LiveServerTestCase
 import time
 
@@ -50,6 +49,9 @@ class NewVisitorTest(LiveServerTestCase):
 
 		inputbox.send_keys(Keys.ENTER)
 		time.sleep(1)
+
+		edith_list_url = self.browser.current_url
+		self.assertRegex(edith_list_url, '/lists/.+')
 		self.wait_for_row_in_list_table('1: Buy peacock feathers')
 
 		table = self.browser.find_element_by_id('id_list_table')
@@ -57,9 +59,22 @@ class NewVisitorTest(LiveServerTestCase):
 		self.wait_for_row_in_list_table('1: Buy peacock feathers')
 		self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
 
-		self.fail('Finish the test!')
+		self.browser.refresh()
+		self.browser.quit()
 
+		self.browser.get(self.live_server_url)
+		page_text = self.browser.find_element_by_tag_name('body').text
+		self.assertNotIn('Buy peacock feathers', page_text)
+		self.assertNotIn('Use peacock feathers to make a fly', page_text)
 
+		inputbox = self.browser.find_element_by_id('id_new_item')
+		inputbox.send_keys('우유 사기')
+		inputbox.send_keys(Keys.ENTER)
 
-if __name__ == '__main__':
-	unittest.main(warnings='ignore')
+		francis_list_url = self.browser.current_url
+		self.assertRegex(francis_list_url, '/lists/.+')
+		self.assertNotEqual(francis_list_url, edith_list_url)
+
+		page_text = self.browser.find_element_by_tag_name('body').text
+		self.assertNotIn('Buy peacock feathers', page_text)
+		self.assertNotIn('우유 사기', page_text)
