@@ -17,9 +17,6 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from lists import views
-import platform
-
-platform.python_implementation()
 
 if settings.DEBUG:
     import debug_toolbar
