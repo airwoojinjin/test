@@ -29,4 +29,8 @@ if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         path('__debug__/', include(debug_toolbar.urls)),
+        path('admin/', admin.site.urls),
+        path('', views.home_page, name='home'),
+        path('lists/the-only-list-in-the-world/', views.view_list, name='view_list'),
+        path('fuck/', views.home_page, name='home'),
     ] + urlpatterns
