@@ -25,8 +25,8 @@ SECRET_KEY = '4i1o%n=@*@54!r7o^^#1(yzajcc(@df+g4$io9!3+46_blm0tx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.16.87.102', '127.0.0.1', 'localhost']
-INTERNAL_IPS = ['172.16.87.102', '127.0.0.1', 'localhost', '192.168.110.135']
+ALLOWED_HOSTS = ['172.16.87.102', '127.0.0.1', 'localhost',]
+INTERNAL_IPS = ['172.16.87.102', '127.0.0.1', 'localhost', '192.168.110.135',]
 
 # Application definition
 
@@ -149,3 +149,10 @@ LOGGING = {
         }
     }
 }
+
+DEBUG_TOOLBAR_CONFIG = {
+
+    'INTERCEPT_REDIRECTS': False,
+
+}
+
