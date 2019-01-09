@@ -26,7 +26,7 @@ SECRET_KEY = '4i1o%n=@*@54!r7o^^#1(yzajcc(@df+g4$io9!3+46_blm0tx'
 DEBUG = True
 
 ALLOWED_HOSTS = ['172.16.87.102', '127.0.0.1', 'localhost',]
-INTERNAL_IPS = ['172.16.87.102', '127.0.0.1', 'localhost', '192.168.110.135',]
+INTERNAL_IPS = ['172.16.87.102', '127.0.0.1', 'localhost', '192.168.110.135', '211.168.231.187 ',]
 
 # Application definition
 
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-#    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'myfuck.urls'
