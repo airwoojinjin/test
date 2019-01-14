@@ -139,14 +139,24 @@ LOGGING = {
             'level': 'DEBUG',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
-        }
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
     },
     'loggers': {
         'django.db.backends': {
             'level': 'DEBUG',
             'handlers': ['console'],
-        }
-    }
+        },
+        'django': {
+            'handlers' : ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
 }
 
 
