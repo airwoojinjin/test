@@ -1,0 +1,188 @@
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/urls/resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='home']>], [<URLPattern 'lists/the-only-list-in-the-world/' [name='view_list']>], [<URLPattern 'fuck/' [name='home']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/urls/resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='home']>], [<URLPattern 'lists/the-only-list-in-the-world/' [name='view_list']>], [<URLPattern 'fuck/' [name='home']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/urls/resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='home']>], [<URLPattern 'lists/the-only-list-in-the-world/' [name='view_list']>], [<URLPattern 'fuck/' [name='home']>]], 'path': '__debug__'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/urls/resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='home']>], [<URLPattern 'lists/the-only-list-in-the-world/' [name='view_list']>], [<URLPattern 'fuck/' [name='home']>]], 'path': '__debug__'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /__debug__
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/core/handlers/base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/urls/resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>, <URLPattern '^render_panel/$' [name='render_panel']>], [<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>, <URLPattern '^sql_select/$' [name='sql_select']>], [<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>, <URLPattern '^sql_explain/$' [name='sql_explain']>], [<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>, <URLPattern '^sql_profile/$' [name='sql_profile']>], [<URLResolver <module 'debug_toolbar.toolbar' from '/fuck/vfuck/lib/python3.7/site-packages/debug_toolbar/toolbar.py'> (djdt:djdt) '__debug__/'>, <URLPattern '^template_source/$' [name='template_source']>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='home']>], [<URLPattern 'lists/the-only-list-in-the-world/' [name='view_list']>], [<URLPattern 'fuck/' [name='home']>]], 'path': '__debug__/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/fuck/vfuck/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /__debug__/
